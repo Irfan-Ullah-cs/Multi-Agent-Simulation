@@ -60,7 +60,7 @@ public class TrafficLight {
                     break;
             }
             timer = 0; // Reset the timer
-            System.out.println("Traffic light state changed to: " + state + " with color: " + state.getColor());
+//            System.out.println("Traffic light state changed to: " + state + " with color: " + state.getColor());
         }
     }
 

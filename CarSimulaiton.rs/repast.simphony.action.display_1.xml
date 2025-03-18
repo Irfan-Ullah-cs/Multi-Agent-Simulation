@@ -11,8 +11,12 @@
       <string>carSimulaiton.styles.CarStyle</string>
     </entry>
     <entry>
+      <string>carSimulaiton.GarbageBin</string>
+      <string>carSimulaiton.styles.GarbageBinStyle</string>
+    </entry>
+    <entry>
       <string>carSimulaiton.Road</string>
-      <string>carSimulaiton.styles.RoadStyle</string>
+      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
   </styles>
   <editedStyles>
@@ -25,8 +29,12 @@
       <null/>
     </entry>
     <entry>
-      <string>carSimulaiton.Road</string>
+      <string>carSimulaiton.GarbageBin</string>
       <null/>
+    </entry>
+    <entry>
+      <string>carSimulaiton.Road</string>
+      <string>carSimulaiton.Road.style_15.xml</string>
     </entry>
   </editedStyles>
   <netStyles/>
@@ -39,7 +47,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>324339850</hashCode>
+    <hashCode>1716688499</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>Grid</layoutProjection>
@@ -51,11 +59,15 @@
     </entry>
     <entry>
       <string>carSimulaiton.Car</string>
-      <int>0</int>
+      <int>3</int>
+    </entry>
+    <entry>
+      <string>carSimulaiton.GarbageBin</string>
+      <int>2</int>
     </entry>
     <entry>
       <string>carSimulaiton.Road</string>
-      <int>2</int>
+      <int>0</int>
     </entry>
   </layerOrder>
   <projections>

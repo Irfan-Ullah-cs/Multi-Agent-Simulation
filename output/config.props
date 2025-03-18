@@ -1,0 +1,9 @@
+model.archive = I:/EMSE/CPS2/Multi Angent/Car/output/complete_model.jar
+batch.params.file = scenario.rs/batch_params.xml
+ssh.key_dir = C:/Users/Irfan/.ssh
+poll.frequency = 60.0
+model.output = I:/EMSE/CPS2/Multi Angent/Car/output
+
+vm.arguments = -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-modules=ALL-SYSTEM --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-exports=java.base/java.lang=ALL-UNNAMED --add-exports=java.xml/com.sun.org.apache.xpath.internal.objects=ALL-UNNAMED --add-exports=java.xml/com.sun.org.apache.xpath.internal=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages
+local.0.instances = 2
+local.0.working_directory = C:/Users/Irfan/AppData/Local/Temp/

@@ -1,24 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <context id="CarSimulation">
-    <projection id="Grid" type="grid">
-        <bounds>
-            <min>0, 0</min>
-            <max>50, 50</max>
-        </bounds>
-    </projection>
+  <projection id="Grid" type="grid">
+    <bounds>
+      <min>0, 0</min>
+      <max>50, 50</max>
+    </bounds>
+  </projection>
 
-    <agent id="Car">
-        <style class="carSimulaiton.styles.CarStyle">
-            <icon path="resources/car_east.png"/>
-        </style>
-    </agent>
+  <agent id="Car">
+    <style class="carSimulaiton.styles.CarStyle">
+      <icon path="resources/car_east.png"/>
+    </style>
+  </agent>
 
-    <agent id="Road">
-        <style class="carSimulaiton.styles.RoadStyle"/>
-    </agent>
+  <agent id="Road">
+    <style class="carSimulaiton.styles.RoadStyle"/>
+  </agent>
 
-    <agent id="TrafficLight">
-        <style class="carSimulaiton.styles.TrafficLightStyle"/>
-    </agent>
+  <agent id="TrafficLight">
+    <style class="carSimulaiton.styles.TrafficLightStyle"/>
+  </agent>
+  
+  <!-- Add the GarbageBin agent with style -->
+  <agent id="GarbageBin">
+    <style class="carSimulaiton.styles.GarbageBinStyle">
+      <icon path="resources/recycling-bin.png"/>
+    </style>
+  </agent>
 
-    <builder class="carSimulaiton.CarSimulationBuilder"/>
+  <builder class="carSimulaiton.CarSimulationBuilder"/>
 </context>

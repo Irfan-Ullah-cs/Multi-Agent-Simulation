@@ -1,5 +1,4 @@
 package carSimulaiton;
-
 import repast.simphony.visualizationOGL2D.DefaultStyleOGL2D;
 import java.awt.Color;
 
@@ -14,11 +13,12 @@ public class Road {
     }
     
     public enum Direction {
-        EASTBOUND,  // Left to right
-        WESTBOUND,  // Right to left
-        NORTHBOUND, // Bottom to top
-        SOUTHBOUND, // Top to bottom
-        ALL         // For intersections, allows all directions
+        EASTBOUND,      // Left to right
+        WESTBOUND,      // Right to left
+        NORTHBOUND,     // Bottom to top
+        SOUTHBOUND,     // Top to bottom
+        BIDIRECTIONAL,  // Both directions
+        ALL             // For intersections, allows all directions
     }
     
     public Road(RoadType type, Direction direction) {
@@ -45,6 +45,15 @@ public class Road {
             return true; // Intersections allow all directions
         }
         
+        if (direction == Direction.BIDIRECTIONAL) {
+            // Bidirectional roads allow movement in both directions
+            if (type == RoadType.HORIZONTAL) {
+                return carDirection == Car.Direction.EAST || carDirection == Car.Direction.WEST;
+            } else if (type == RoadType.VERTICAL) {
+                return carDirection == Car.Direction.NORTH || carDirection == Car.Direction.SOUTH;
+            }
+        }
+        
         switch (direction) {
             case EASTBOUND:
                 return carDirection == Car.Direction.EAST;
@@ -63,13 +72,17 @@ public class Road {
     public Color getColor() {
         switch(type) {
             case HORIZONTAL:
-                if (direction == Direction.EASTBOUND) {
+                if (direction == Direction.BIDIRECTIONAL) {
+                    return new Color(180, 180, 180);  // Light gray for bidirectional roads
+                } else if (direction == Direction.EASTBOUND) {
                     return new Color(150, 150, 120);  // Slightly yellowish for eastbound
                 } else {
                     return new Color(120, 150, 150);  // Slightly bluish for westbound
                 }
             case VERTICAL:
-                if (direction == Direction.NORTHBOUND) {
+                if (direction == Direction.BIDIRECTIONAL) {
+                    return new Color(180, 180, 180);  // Light gray for bidirectional roads
+                } else if (direction == Direction.NORTHBOUND) {
                     return new Color(150, 120, 150);  // Slightly purplish for northbound
                 } else {
                     return new Color(120, 150, 120);  // Slightly greenish for southbound
